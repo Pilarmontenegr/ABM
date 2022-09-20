@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace ABM_.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+        internal object persona;
+
         public ApplicationDbContext()
         {
 
