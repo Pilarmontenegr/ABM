@@ -1,16 +1,29 @@
 ﻿
+using ABM_.Data;
+using ABM_.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ABM_.Controllers
 {
     public class PersonasController : Controller
     {
-       
+        
+         private readonly ApplicationDbContext _context;
+
+         public PersonasController(ApplicationDbContext context)
+            {
+            _context = context;
+            }
+        
 
         public IActionResult Index()
         {
+
+            //llamo al _contex
+            var personas = _context.Personas.ToList();
             //le paso el nombre de la vista
-            return View("Personas");
+            return View("Personas",personas);
         }
         public IActionResult Add()
         {
@@ -27,5 +40,9 @@ namespace ABM_.Controllers
             //le paso el nombre de la vista
             return View("Change");
         }
+        
+        
     }
 }
+
+   

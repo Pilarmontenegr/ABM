@@ -2,6 +2,6 @@
 {
     public class PersonasViewModels
     {              //hace referencia a la clase persona
-        public List<Persona> personas { get; set; }
+        public List<Persona> Personas { get; set; }
     }
 }

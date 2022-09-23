@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ABM_.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace ABM_.Data
 {
+   
+    
     public class ApplicationDbContext : IdentityDbContext
     {
-        internal object persona;
+        //internal object persona;
+        public virtual DbSet<Persona> Personas { get; set; } = null!;
+
 
         public ApplicationDbContext()
         {

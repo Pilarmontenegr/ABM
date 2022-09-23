@@ -1,11 +1,15 @@
-﻿using ABM_.Models;
+﻿using ABM_.Data;
+using ABM_.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace ABM_.Controllers
 {
     public class HomeController : Controller
     {
+       
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
