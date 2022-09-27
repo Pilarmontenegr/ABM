@@ -1,6 +1,6 @@
-﻿@*model ABM_.Views.Personas.PersonasModel*@
-@model List<PersonasViewModels>
-{
+﻿
+@model List<Persona>
+@{
     ViewData["Title"] = "ABM De Personas";
 }
 
@@ -28,17 +28,20 @@
                 </tr>
             </thead>
             <tbody>
-                </thead>
+               
             <tbody>
-                   @* @foreach (var persona in ...... )
+                    @foreach (var persona in Model )
                     {
                     <tr>
                         <td>@persona.Id</td>
                         <td>@persona.Nombre</td>
                         <td>@persona.Apellido</td>
+                        <td>@persona.Dni</td>
+                        <td>@persona.Domicilio</td>
+                        <td>@persona.Edad</td>
                         
                     </tr>
-                    }*@
+                    }
             </tbody>
         </table>
     </div>
