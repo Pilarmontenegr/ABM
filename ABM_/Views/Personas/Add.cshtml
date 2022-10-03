@@ -1,13 +1,40 @@
-﻿@*@model ABM_.Views.Personas.PersonasModel*@
+﻿@model Persona
 @{
     ViewData["Title"] = "Add";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Add people</h1>
-    <p>
-        <i>Aquí podrá:</i> <br />
-        <b>Agregar un nuevo usuario.</b> <br />
-     
-    </p>
+<h1> Add New Users </h1>
+<hr />
+<div class="row">
+        
+    <form asp-action="Create">
+
+        <div class="mb-3">
+            <label for="Nombre" class="form-label">Name</label>
+            <input asp-for="Nombre" type="text" class="form-control" id="Nombre" aria-describedby="Nombre">
+
+        </div>
+        <div class="mb-3">
+            <label for="Apellido" class="form-label">Surname</label>
+            <input asp-for="Apellido" type="text" class="form-control" id="Apellido" aria-describedby="Apellido">
+        </div>
+        <div class="mb-3">
+            <label for="Dni" class="form-label">Dni</label>
+            <input asp-for="Dni" type="text" class="form-control" id="Dni" aria-describedby="Dni">
+        </div>
+        <div class="mb-3">
+            <label for="Domicilio" class="form-label">Addres</label>
+            <input asp-for="Domicilio" type="text" class="form-control" id="Domicilio" aria-describedby="Domicilio">
+        </div>
+        <div class="mb-3">
+            <label for="Edad" class="form-label">Age</label>
+            <input asp-for="Edad" type="text" class="form-control" id="Edad" aria-describedby="Edad">
+        </div>
+
+
+        <button type="submit" value="Create" class="btn btn-primary">Add</button>
+    </form>
 </div>
+
+
+
